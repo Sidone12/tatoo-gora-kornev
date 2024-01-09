@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       menuItems: [
-        { text: "ABOUT", url: "/#aboutme" }, //section:'/#home#aboutme'
+        { text: "ABOUT", url: "/#aboutme" },
         { text: "GALLERY", url: "/#gallery" },
         { text: "BOOKING", url: "/#booking" },
         { text: "AFTERCARE", url: "/aftercare" },

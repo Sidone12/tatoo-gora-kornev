@@ -1,6 +1,5 @@
 <template>
     <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" v-if="formError">
-        <!-- Background backdrop, show/hide based on modal state.-->
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
         <div class="fixed inset-0 z-10 overflow-y-auto mx-5">

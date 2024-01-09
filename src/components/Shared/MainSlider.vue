@@ -12,7 +12,6 @@
             <div class="flex flex-col items-center ">
                 <p class=" text-white text-xl text-center sm:text-sm sm:mb-1">Tattoos and Art.</p>
                 <h1 class=" text-[100px]  text-white font-semibold mb-5 text-center sm:text-3xl 2xl:text-[150px] sm:mb-1 font">Gora Kornev</h1>
-                <!-- <p class=" text-brand-grey text-xs mb-10 text-center sm:text-sm sm:mb-1">Tattoos . Art . Illustration</p> -->
                 <router-link to="/#booking">
                     <button class="tracking-[-.05em] text-[#979592] bg-[rgba(0,0,0,0.3)] text-2xl font-semibold mb-10 border border-solid border-brand-grey py-1 px-5 hover:bg-[rgba(0,0,0,0.7)] hover:text-brand-grey transition-all duration-500 sm:text-sm sm:px-2 ">BOOK A SECTION</button>
                 </router-link>  
@@ -20,7 +19,6 @@
             <div @click="next"><span class="text-[rgba(0,0,0,0.3)] hover:text-[rgba(0,0,0,0.7)] transition-all duration-500 text-6xl sm:text-lg"><i class="uil uil-angle-right-b"></i></span></div>
         </div>
     </div>
-
 </div>
 </template>
 

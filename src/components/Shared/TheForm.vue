@@ -247,25 +247,20 @@ export default {
   },
   methods: {
     onChange(event) {
-      // console.log("onBodyImgChange files", event.target.value);
 
       const files = event.target.files;
-      // console.log("saved file", files);
 
-      this.bodyPicture.push(...files); // перевірити чи є вже файл в масиві і якщо немає додати якщо є ні
-      // console.log("bodyPicture", this.bodyPicture);
+
+      this.bodyPicture.push(...files); 
     },
     onTattooImgChange(event) {
-      // console.log("onTattooImgChange files", event.target.value);
       const tattooFiles = event.target.files;
 
-      // console.log("saved tattooFiles", tattooFiles);
       if (this.referencePictures.length + tattooFiles.length > 5) {
         alert("too many pictures please add only 5")
         return
       }
-      this.referencePictures.push(...tattooFiles); // перевірити чи є вже файл в масиві і якщо немає додати якщо є ні
-      // console.log("referencePictures", this.referencePictures);
+      this.referencePictures.push(...tattooFiles); 
     },
     deleteImg() {
       this.bodyPicture.shift();
@@ -277,14 +272,17 @@ export default {
     resizeImg(fileData) {
       return new Promise((resolve, reject) => {
         var image = new Image();
-        image.onload = function (imageEvent) {  // функція яка викликається після підгрузки картинки
+        image.onload = function (imageEvent) {  
           // Resize the image
-          const max_size = 1000;// TODO : pull max size from a site config
-          var canvas = document.createElement('canvas'),    //  за допомогою самого браузера ми перемальовуємо картинку і зміюємо її розмір
+          const max_size = 1000;
+          // TODO : pull max size from a site config
+          var canvas = document.createElement('canvas'),
+          //  за допомогою самого браузера ми перемальовуємо картинку і зміюємо її розмір
 
             width = image.width,
             height = image.height;
-          if (width > height) {                 // перевірка та ресайз наших картинок
+          if (width > height) {
+          // перевірка та ресайз наших картинок
             if (width > max_size) {
               height *= max_size / width;
               width = max_size;
@@ -297,12 +295,14 @@ export default {
           }
           canvas.width = width;
           canvas.height = height;
-          canvas.getContext('2d').drawImage(image, 0, 0, width, height); // малюємо картинку
+          canvas.getContext('2d').drawImage(image, 0, 0, width, height);
+          // малюємо картинку
           var dataUrl = canvas.toDataURL("image/jpeg");
           // document.body.appendChild(canvas)// відмальовуємо картинку в HTML
           resolve(dataUrl);
         }
-        image.src = fileData;   // тут починаємо завантажувати картинку
+        image.src = fileData;
+        // тут починаємо завантажувати картинку
       });
     },
 
@@ -340,11 +340,6 @@ export default {
       this.isBusy = true;
 
       const a = Object.fromEntries(new FormData(event.target));
-      // console.log("Before image load bodyPicture data", this.bodyPicture);
-      // console.log(
-      //   "Before image load referencePictures data",
-      //   this.referencePictures
-      // );
 
       let images = []
       for (const element of this.bodyPicture) {

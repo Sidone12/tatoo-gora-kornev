@@ -1,9 +1,6 @@
 <template>
   <div>
     <MainNav />
-    <!-- <router-view /> -->
-    <!-- <PreloaderImg /> -->
-
     <router-view v-slot="{ Component, route }"> 
       <transition name="slide" mode="out-in">
         <component :is="Component" :key="route.path" />

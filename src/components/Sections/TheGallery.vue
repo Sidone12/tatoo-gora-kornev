@@ -10,19 +10,6 @@
         >
           <img class="w-full" :src="item.url" alt="" />
         </div>
-
-        <!-- <div >
-        <img class="object-none object-center" src="https://tattookiev.org/wp-content/uploads/2021/01/sleevetattoo-037.jpg" alt="">
-        </div> -->
-        <!-- <div style="background-image:url('https://tattookiev.org/wp-content/uploads/2021/01/sleevetattoo-037.jpg')" 
-        class="w-full  box-border">
-        </div>
-        <div style="background-image:url('https://tattookiev.org/wp-content/uploads/2021/01/sleevetattoo-037.jpg')" 
-        class="w-full  box-border">
-        </div>
-        <div style="background-image:url('https://tattookiev.org/wp-content/uploads/2021/01/sleevetattoo-037.jpg')" 
-        class="w-full  box-border">
-        </div> -->
       </div>
     </div>
   </section>
